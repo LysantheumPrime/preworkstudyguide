@@ -46,6 +46,37 @@
           <li>Control flow is the order in which a computer executes a code in a script.</li>
         </ul>
       </section>
+      
+      <section class="card" id="NodeJS">
+        <h2>NodeJS</h2>
+        <ul>
+          <li>1 way to use node is in REPL mode which stands for Read Print Loop</li>
+          <li>When you type node into the command line it allows you to run Javascript code and will print out the results, For example we can type console.log('Hello World') and it will log in the console.</li>
+          <li>CTRL+C closes the console</li>
+          <li>Create a NodeJS file in VS-Code by typing index.js</li>
+          <li>NodeJS has a handful of built-in identifiers, one of those globals is console which logs out values to the terminal</li>
+          <li>You can run commands in the command line by using the path to the file such as "node index.js", but if it's just a index file you can just do "node ." as it is the parent directory</li>
+          <li>There is another indentifier called global this object is a namespace that is available throughout the entire node process for example if we assigned a lucky number property to global we could then access it anywhere else in our code.</li>
+          <li>Example: console.log(global.luckyNum);
+              global.luckyNum = '23';
+              console.log(global.luckyNum);
+              It will print the lucky number into the console.
+          </li>
+          <li>Important global to be familiar with is "process" which gives you access to the currently running node you might use it to check the current platform or operating system you're currently on.
+            console.log(process.platform);
+          </li>
+          <li>Before a node process finishes it emits an event named "exit"</li>
+          <li>Example: process.on('exit', function() {})</li>
+          <li>The function isn't called the first time node.js sees it it's only called after the exit event occurs at some point in the future.</li>
+          <li>Example of a "created from scratch" or CFS const { EventEmitter } = require('events'); const eventEmitter = new EventEmitter(); eventEmitter.on('lunch', () => {
+            console.log('yum') 
+            }) eventEmitter.emit('lunch');
+          </li>
+          <li>Node has a built-in file system module called fs it can read write and delete files on the file system among other things and it can also do things in a blocking and non-blocking way.</li>
+          <li>Anytime you see a function end in sync === blocking in other words it needs to finish all of its work before any of your other code can run</li>
+          <a href="https://www.youtube.com/watch?v=ENrzD9HAZK4&t=400s">NodeJS Tutorial</a> 
+        </ul>
+      </section>
 
 
     </main>
